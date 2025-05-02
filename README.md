@@ -15,6 +15,8 @@ written /outputs/test.wav
 1-trimmed.wav is trimmed wave file, just part of header of MP3 recording.  
 /doc/, references of wave file specification.  
 
+[main.cpp](main.cpp) is the source code for exe, should be commented enough and self-explanatory.  
+
 
 ### Q&A   
 ```
