@@ -1,7 +1,22 @@
 # wav_non-PCM
-wave file, specifc MP3 recording, non-PCM format
+wave file, specifc MP3 recording, non-PCM format, try to understand what_is_IMA_ADPCM
 
-###Q&A   
+![output.JPG](output.JPG)  
+
+### how to build exe
+C/C++ compiler, i.e. minGW, win10, 'make clean' or 'make'  
+wav_rw.exe will be produced  
+
+### how to uses
+double click wav_rw.exe
+it will reads /inputs/1-trimmed.wav, parse and display wave Header  
+written /outputs/test.wav  
+
+1-trimmed.wav is trimmed wave file, just part of header of MP3 recording.  
+/doc/, references of wave file specification.  
+
+
+### Q&A   
 ```
 52 49 46 46 34 2A 41 05 57 41 56 45 66 6D 74 20
 14 00 00 00 11 00 02 00 40 1F 00 00 AE 1F 00 00
