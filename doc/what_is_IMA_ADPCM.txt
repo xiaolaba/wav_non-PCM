@@ -1,0 +1,48 @@
+In a WAV file header, the audioFormat field specifies the encoding format of the audio data. 
+A value of 17 in the audioFormat field corresponds to 
+IMA ADPCM (Interactive Multimedia Association Adaptive Differential Pulse Code Modulation) compression.
+
+Details:
+
+    IMA ADPCM is a lossy audio compression format that uses 4-bit ADPCM encoding.
+
+    It is commonly used in older game audio, telephony, and some embedded systems due to its simplicity and low computational overhead.
+
+    The compression ratio is typically 4:1 (compared to uncompressed PCM), meaning 16-bit PCM is reduced to 4 bits per sample.
+
+Other Common audioFormat Values:
+
+    1: PCM (uncompressed linear pulse-code modulation, the standard for WAV files).
+
+    3: IEEE floating-point PCM.
+
+    6: G.711 A-law (telephony compression).
+
+    7: G.711 £g-law (telephony compression).
+
+    49: GSM 6.10 (voice compression).
+
+    0x706D (28749): MPEG-1 Layer 3 (MP3, though non-standard in WAV).
+
+Structure of the WAV Header:
+
+The audioFormat field is part of the "fmt" chunk in the WAV file. Example:
+c
+
+typedef struct {
+    uint16_t audioFormat;   // 1 = PCM, 17 = IMA ADPCM, etc.
+    uint16_t numChannels;   // 1 (mono), 2 (stereo), etc.
+    uint32_t sampleRate;    // e.g., 44100 Hz
+    uint32_t byteRate;      // sampleRate * blockAlign
+    uint16_t blockAlign;    // numChannels * bitsPerSample / 8 (for PCM)
+    uint16_t bitsPerSample; // e.g., 16-bit for PCM
+    // Additional fields may exist for non-PCM formats.
+} WavFmtChunk;
+
+Notes:
+
+    IMA ADPCM WAV files require extra data in the "fmt" chunk (e.g., samples per block, extra preamble).
+
+    Not all audio software supports IMA ADPCM, so compatibility may vary.
+
+If you're working with such a file, ensure your tools or codecs support IMA ADPCM decoding.
