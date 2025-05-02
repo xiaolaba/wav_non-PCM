@@ -5,7 +5,7 @@ wave file, specifc MP3 recording, non-PCM format, try to understand what_is_IMA_
 
 ### how to build exe
 C/C++ compiler, i.e. minGW, win10, 'make clean' or 'make'  
-[wav_rw.exe](wav_rw.exe) will be produced, or download here(wav_rw.exe)  
+[wav_rw.exe](wav_rw.exe) will be produced, or download [here](wav_rw.exe)  
 
 ### how to uses
 double click wav_rw.exe
