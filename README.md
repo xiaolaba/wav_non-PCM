@@ -16,6 +16,7 @@ written /outputs/test.wav
 /doc/, references of wave file specification.  
 
 [main.cpp](main.cpp) is the source code for exe, should be commented enough and self-explanatory.  
+it was base on this, https://github.com/lyc18/C-CPP-read-write-WAV
 
 
 ### Q&A   
