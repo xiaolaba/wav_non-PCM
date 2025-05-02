@@ -5,7 +5,7 @@ wave file, specifc MP3 recording, non-PCM format, try to understand what_is_IMA_
 
 ### how to build exe
 C/C++ compiler, i.e. minGW, win10, 'make clean' or 'make'  
-wav_rw.exe will be produced  
+[wav_rw.exe](wav_rw.exe) will be produced, or download here(wav_rw.exe)  
 
 ### how to uses
 double click wav_rw.exe
@@ -26,7 +26,7 @@ written /outputs/test.wav
 以上是一個 wave 檔案的開頭, 代表什麼資訊
 ```
 
-###Answer by deepseek and chatgpt, 大致可以, 但計算錯誤
+### Answer by deepseek and chatgpt, 大致可以, 但計算錯誤
 ```
 這是一個 WAVE 音訊檔案的開頭部分，包含 RIFF 檔案結構和基本的格式資訊。以下是對這些十六進位數據的解讀：
 
@@ -65,7 +65,7 @@ written /outputs/test.wav
 這是一個採用 IMA ADPCM 壓縮的立體聲 WAVE 檔案，採樣率 8000 Hz，檔案總大小約 84.2 MB，其中音訊數據部分佔約 84.2 MB。這種格式常見於遊戲音效或需要壓縮的語音應用。
 ```
 
-###錯誤包括
+### 錯誤包括
 
 ```
 2. **檔案大小 (4-7 bytes)**
